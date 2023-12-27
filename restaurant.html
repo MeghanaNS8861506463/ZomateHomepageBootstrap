@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants</title>
+
+    
+
+    <style>              
+        body {
+            background: #FBFBFB;
+            margin-top: 0px;
+            margin-left: 0px;
+            width: 1263px;
+            height: 930px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            background-color: #CE0505;
+            width: 1263px;
+            height: 80px;
+            margin-top: 0px;
+            margin-left: 0px;
+        }
+
+        .logo {
+            border: #CE0505;
+            border-radius: 50%;
+            height: 52px;
+            width: 52px;
+            background-color: #FFFFFF;
+            text-align: center;
+            font: icon;
+            font-size: 36px;
+            color: #CE0505;
+            margin-left: 102px;
+            -webkit-text-stroke: thin;
+        }
+
+        .login {
+            border: #FFFFFF;
+            background-color: #CE0505;
+            text-align: center;
+            font-size: 16px;
+            color: #FFFFFF;
+            margin-left: 740px;
+        }
+
+        .CreateAccount {
+            display: inline-block;
+            width: 181px;
+            height: 46px;
+            border-color: #FFFFFF;
+            border-radius: 3px;
+            background-color: #CE0505;
+            text-align: center;
+            color: #FFFFFF;
+            border: 1px solid #FFFFFF;
+            font-size: 16px;
+            margin-left: 20px;
+        }
+
+        .filters {
+            display: flex;
+            height: 673px;
+            width: 225px;
+            box-shadow: 0px 3px 6px #00000029;
+            margin-left: 113px;
+            margin-top: 15px;
+            text-align: left;
+            background: #FFFFFF;
+        }
+
+        .filtersContent {
+            height: 600px;
+            width: 195px;
+            margin-left: 25px;
+            margin-top: -5px;
+            text-align: left;
+            color: #8C96AB;
+        }
+
+        h1 {
+            font: bold 36px Poppins;
+            color: #192F60;
+            margin-left: 113px;
+            margin-top: 40px;
+        }
+
+        h2 {
+            font-size: 30px;
+            color: #192F60;
+            display: flex;
+            margin-left: 200px;
+            margin-top: -100px;
+            width: 500px;
+        }
+
+        h4 {
+            font-size: 18px;
+            color: #192F60;
+            height: 25px;
+            margin-bottom: 10px;
+        }
+
+        h5 {
+            font-size: 16px;
+            color: #192F60;
+            display: flex;
+            margin-left: 200px;
+            margin-top: -15px;
+            height: 10px;
+        }
+
+        h6 {
+            font-size: 14px;
+            color: #192F60;
+            margin-top: 20px;
+            margin-bottom: 13px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #636F88;
+            display: flex;
+        }
+
+        input[type=checkbox] {
+            accent-color: #3A5075;
+        }
+
+        input[type=radio] {
+            accent-color: #3A5075;
+        }
+
+        .SR {
+            height: 280px;
+            width: 750px;
+            background: #FFFFFF;
+            box-shadow: 0px 3px 6px #00000029;
+        }
+
+        img {
+            width: 110px;
+            height: 110px;
+            object-fit: cover;
+            margin-top: 20px;
+            margin-left: 35px;
+            border-radius: 10%;
+        }
+
+        hr {
+            width: 527px;
+            margin-top: 40px;
+            border: 0px solid #DEDFE5;
+            border-top: 1px solid #DEDFE5;
+        }
+
+        .pagination {
+            display: flex;
+            width: 35px;
+            height: 35px;
+            border: 1.5px solid #8C96AB;
+            border-radius: 7px;
+            background-color: #850404e4;
+            margin-left: 12px;
+            margin-top: 40px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .pagination:hover {
+  background-color: rgb(246, 19, 11);
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <a href="https://www.google.com" style="text-decoration:none;">
+        <div class="header">
+            <button class="logo">e!</button>
+            <button class="login">Login</button>
+            <button class="CreateAccount">Create an account</button>
+        </div>
+    </a>
+
+    <!-- Body Page -->
+
+    <!-- Body heading -->
+    <span class="heading">
+        <h1>Breakfast Places in Mumbai</h1>
+    </span>
+
+    <!-- Filter Form -->
+    <span class="filters">
+        <span class="filtersContent">
+            <h4>Filters</h4>
+            <h6 style="margin-top: 0px;">Select Location</h6>
+            <select id="select" name="location" id="location"
+                style="font:14px poppins; color: #8C96AB; width: 175px; height:35px; margin-top: -5px; border-radius: 3px; accent-color: #3A5075;">
+                <option class="a" value="">Select Location</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="chennai">Chennai</option>
+                <option value="bangalore">Bangalore</option>
+                <option value="delhi">Delhi</option>
+                <option value="hyderabad">Hyderabad</option>
+            </select>
+
+            <h6>Cuisine</h6>
+            <input type="checkbox" id="north indian" name="north indian">
+            <label for="north indian">North Indian</label>
+            <br>
+            <input type="checkbox" id="south indian" name="south indian">
+            <label for="south indian">South Indian</label>
+            <br>
+            <input type="checkbox" id="Chinese" name="Chinese">
+            <label for="Chinese">Chinese</label>
+            <br>
+            <input type="checkbox" id="Fast Food" name="Fast Food">
+            <label for="Fast Food">North Indian</label>
+            <br>
+            <input type="checkbox" id="street food" name="street food">
+            <label for="street food">Street Food</label>
+
+            <h6>Cost For Two</h6>
+            <input type="radio" id="less than 500" name="Cost For Two" value="less than 500">
+            <label for="less than 500">Less than 500</label><br>
+            <input type="radio" id="500 to 1000" name="Cost For Two" value="500 to 1000">
+            <label for="500 to 1000">500 to 1000</label><br>
+            <input type="radio" id="1000 to 1500" name="Cost For Two" value="1000 to 1500">
+            <label for="1000 to 1500">1000 to 1500</label><br>
+            <input type="radio" id="1500 to 2000" name="Cost For Two" value="1500 to 2000">
+            <label for="1500 to 2000">1500 to 2000</label><br>
+            <input type="radio" id="2000+" name="Cost For Two" value="2000+">
+            <label for="2000+">2000+</label>
+
+            <h4>Sort</h4>
+            <input type="radio" id="price low to high" name="sort" value="price low to high">
+            <label for="price low to high">Price low to high</label><br>
+            <input type="radio" id="price high to low" name="sort" value="price high to low">
+            <label for="price high to low">Price high to low</label><br>
+        </span>
+    </span>
+
+    <!-- Search Results -->
+    <span style="display: flex; margin-left: 380px; margin-top: -672px;">
+        <span class="SR">
+            <img src="./image/image_1.png" alt="Image Not Found">
+            <h2>The Big Chill Cakery</h2>
+            <h5>FORT</h5>
+            <p style="margin-left: 200px; margin-top: -10px; height: 10px;">
+                Shop 1, Plot D, Samruddhi Complex, Chincholi …
+            </p>
+            <hr>
+            <p style="margin-left: 37px; margin-top: 29px; height: 10px;">
+                CUSINES:
+            <p style="margin-left: 220px; margin-top: -26px; height: 10px;">Bakery</p>
+            </p>
+            <p style="margin-left: 37px; margin-top: -10px; height: 10px;">
+                COST FOR TWO:
+            <p style="margin-left: 220px; margin-top: -26px; height: 10px;">&#8377 700</p>
+            </p>
+        </span>
+    </span>
+
+
+    <span style="display: flex; margin-left: 380px; margin-top: 30px; ">
+        <span class="SR">
+            <img src="./image/image_2.png" alt="Image Not Found">
+            <h2>The Bake Shop</h2>
+            <h5>FORT</h5>
+            <p style="margin-left: 200px; margin-top: -10px; height: 10px;">
+                Shop 1, Plot D, Samruddhi Complex, Chincholi …
+            </p>
+            <hr>
+            <p style="margin-left: 37px; margin-top: 29px; height: 10px;">
+                CUSINES:
+            <p style="margin-left: 220px; margin-top: -26px; height: 10px;">Bakery</p>
+            </p>
+            <p style="margin-left: 37px; margin-top: -10px; height: 10px;">
+                COST FOR TWO:
+            <p style="margin-left: 220px; margin-top: -26px; height: 10px;">&#8377 700</p>
+            </p>
+        </span>
+    </span>
+    <span style="display: flex; margin-left:570px">
+        <button class="pagination"><p style="display: flex; margin-top: 6.5px; margin-left: 5px;"><</p></button>
+        <button class="pagination"><p style="display: flex; margin-top: 6.5px; margin-left: 5px;">1</p></button>
+        <button class="pagination"><p style="display: flex; margin-top: 6.5px; margin-left: 5px;">2</p></button>
+        <button class="pagination"><p style="display: flex; margin-top: 6.5px; margin-left: 5px;">3</p></button>
+        <button class="pagination"><p style="display: flex; margin-top: 6.5px; margin-left: 5px;">4</p></button>
+        <button class="pagination"><p style="display: flex; margin-top: 6.5px; margin-left: 5px;">5</p></button>
+        <button class="pagination"><p style="display: flex; margin-top: 6.5px; margin-left: 5px;">></p></button>
+    </span>
+</body>
+
+</html>
